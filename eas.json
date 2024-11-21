@@ -1,0 +1,25 @@
+{
+  "cli": {
+    "version": ">= 10.2.4",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "resourceClass": "large",
+      "autoIncrement": true,
+      "env": {
+        "EAS_BUILD_DISABLE_BUNDLE_JAVASCRIPT_STEP": "1"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
